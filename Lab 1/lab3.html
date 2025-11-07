@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Title</title>
+    
+</head>
+<body>
+
+    <div id="page-container">
+        
+        <div id="header-section">
+            <header>
+                <h1>My Awesome Website</h1>
+                <div style="color:rgb(98, 149, 236)"></div>
+                <span style="font-style: italic;">Be pretty everyday</span>
+            </header>
+        </div>
+
+        <div id="content-section" class="content-section">
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="contact-date">Preferred Contact Date:</label>
+                    <input type="date" id="contact-date" name="contact-date"><br><br>
+
+                    <label for="satisfaction">Satisfaction Level (0-100):</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="0" max="100" value="50"><br><br>
+
+                    Choose your favorite color: <input type="color" name="warnapilihan">
+                    <br><br>
+                    Date: <input type="date" name="tarikh">
+                    <br><br>
+                    Time: <input type="time" name="masa">
+                    <br><br>
+                    Month and year: <input type="month" name="bulandantahun">
+                    <br><br>
+                    Week: <input type="week" name="minggu">
+                    <br><br>
+                    <input type="submit" value="Sumbit">
+                </form>
+            </div>
+            
+            <div class="calculator">
+                <h3>Addition Calculator</h3>
+                
+                <input type="number" id="num1" placeholder="Enter number 1" oninput="calculateSum()"> +
+                <input type="number" id="num2" placeholder="Enter number 2" oninput="calculateSum()"> = 
+                <output name="result" for="num1 num2" id="sum-output">0</output>
+
+                <script>
+                    function calculateSum() {
+                        const num1 = parseFloat(document.getElementById('num1').value) || 0;
+                        const num2 = parseFloat(document.getElementById('num2').value) || 0;
+                        const sum = num1 + num2;
+                        document.getElementById('sum-output').value = sum;
+                    }
+                </script>
+            </div>
+        </div>
+
+        <div id="footer-section">
+            <footer>
+                <p>Contact Information: Natasya@cantik.com | Phone: 011-37492354</p>
+                <p>&copy; 2025 Nor Ain Natasya.</p>
+            </footer>
+        </div>
+
+    </div> </body>
+</html>

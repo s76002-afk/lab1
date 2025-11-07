@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Page Example</title>
+</head>
+<body>
+
+    <header>
+        <h1>Horanghae</h1>
+        <p>ready to serve you well!</p>
+    </header>
+        <h2>Search Box</h2>
+        <form method="get">
+            <label for="keyword">Search:</label>
+            <input type="search" id="keyword" name="keyword">
+            <br>
+            <br>
+            <input type="submit" value="Go">
+            <input type="reset">
+        </form>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Our Site!</h2>
+            <p>This is the main content area. Here you can place text, images, videos, and anything else unique to this page.</p>
+            <p>We aim to bring your web presence to the next level!</p>
+        </section>
+
+        <form action="/action_page.php">
+        <label for="email">Email:</label>
+        <input type="email" id="email"
+    name="email" required>
+        <input type="submit" value="Sign
+Me Up!">
+        <input type="reset">
+    </form>
+
+        <section id="services">
+            <h3>Our Services</h3>
+            <p>We offer Web Design, Media Planning, and Consultation.</p>
+        </section>
+
+    <form action = "/action_page.php" method="get">
+        <label for="myWebsite">Suggest a Website:</label>
+        <input type="url" id="myWebsite" name="myWebsite">
+        <br>
+        <br>
+        <input type="submit" value="Send Form">
+        <input type="reset">
+    </form>
+
+    <h2>Sign Up for Text Message</h2>
+    <form method="get">
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{3}-[0-9]{8}">
+        <br>
+        <br>
+        <input type="submit" value="Text Me">
+        <input type="reset">
+    </form>
+
+    <h2>The datalist element</h2>
+    <form action="/action_page.php" method="get">
+        <label for="color">Choose your favourite
+    color:</label>
+        <input list="colors" name="color" id="color">
+        <datalist id="colors">
+        <option value="red">
+        <option value="green">
+        <option value="blue">
+        <option value="yellow">
+        <option value="black">
+        </datalist>
+        <input type="submit">
+        </form>
+        <p><strong>Note:</strong> The datalist tag is not
+    supported in Safari 12.0 (or earlier).</p>
+
+    <h2>Slider Control</h2>
+    <form action="/action_page.php" method="get">
+        <label for="myChoice"> Choose a number between 1 and 100:</label>
+        <br> Low <input type="range" name="myChoice" id="myChoice" min="1" max="100"> High
+        <input type="submit" value="send">
+        <input type="reset">
+
+        <h2>Select Car</h2>
+        <label for="cars"> Choose a car: </label>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NorAinNatasya</p>
+        <p>Contact us at info@example.com</p>
+    </footer>
+
+</body>
+</html>
+
+
