@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAY THE NAME! SEVENTEEN (Lab 4)</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* HEADER & NAVIGATION STYLING (For Structure and Centering) */
+header {
+    /* Vibrant Rose Pink */
+    background-color: #ff6699; 
+    color: white;
+    padding: 15px 20px;
+    
+    /* === FLEXBOX FOR CENTERING/STRUCTURE === */
+    display: flex;
+    flex-direction: column; /* Stacks children (h1, nav, div) vertically */
+    align-items: center; /* Centers items horizontally */
+    /* ======================================= */
+    
+}
+
+header h1 {
+    margin: 0 0 10px 0; /* Add margin below the main heading */
+    font-weight: 800;
+}
+
+/* 1. Centering the Navigation Links */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0; /* Add margin below the main navigation */
+    display: flex;
+    gap: 28px;
+}
+
+/* 2. Styling the Separate Contact Link */
+.header-contact-link a {
+    /* Styles for the "Join The Carat Zone!" link */
+    color: #2c3e50; /* Darker color for high visibility */
+    background-color: #759bfa; /* Serenity Blue background */
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid #2c3e50; /* Dark border for emphasis */
+}
+
+.header-contact-link a:hover {
+    background-color: white;
+    color: #ff6699;
+}
+        .carat-diamond {
+            color: #fc5791; /* Soft Pink */
+            text-shadow: 0 0 5px #0062b8; /* Blue glow */
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        /* GLOBAL RESET & FONT STYLING */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+    /* Serenity Blue background for overall site - easy on the eyes */
+            background-color: #d0e4f5; 
+            color: #2c3e50; /* Dark text for high contrast */
+            line-height: 1.6;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+    /* Use CSS Grid to structure the main sections */
+            display: grid;
+            gap: 30px;
+        }
+
+/* SECTION CONTENT BOX FOR READABILITY */
+        .content-box {
+            background-color: white; /* Light background for easy reading */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+/* HEADER & NAVIGATION STYLING (Rose Quartz & Serenity) */
+        header {
+    /* Vibrant Rose Pink */
+            background-color: #ff6699; 
+            color: white;
+            padding: 15px 20px;
+            display: flex; /* Flexbox for horizontal navigation */
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 800; /* Increased font weight */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+/* INTERACTIVE LINK STATES & TEXT DECORATIONS */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+    /* Added text decoration line below links */
+            border-bottom: 2px solid transparent; 
+        }
+
+        nav a:hover { 
+    background-color: #b3cee5; /* Serenity Blue on hover */
+    color: #ff6699; /* Text changes to Rose Pink */
+    text-decoration: none; 
+    border-bottom: 2px solid #ff6699; /* Rose Pink underline on hover */
+}
+
+nav a:visited { 
+    color: #e9ebf0; 
+}
+
+nav a:active { 
+    background-color: #e00e31; 
+}
+
+/* HEADING STYLING (Text Decorations) */
+h2 {
+    color: #ff6699;
+    /* Solid underline for structure and clarity */
+    text-decoration: underline solid 3px #b3cee5; 
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+/* MEMBER LIST STYLING */
+.member-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+}
+
+.member-list li {
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    background-color: #fce4ec; /* Light Rose Quartz background */
+    border-left: 5px solid #ff6699; /* Rose Pink accent bar */
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+
+/* Sub-heading styling to separate units */
+.content-box h3 {
+    color: #2696f9; /* Serenity Blue for sub-headings */
+    border-bottom: 1px dashed #8194f1;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+/* VIDEO & FORM STYLING (Kept for consistency and required fields) */
+.video-container {
+    max-width: 800px; /* Set a max width for large screens */
+    margin: 20px auto; /* KEY: Centering the block container */
+    overflow: hidden;
+
+    /* OPTIONAL: Use Flexbox to center the caption if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items like the caption horizontally */
+}
+
+.video-container iframe {
+    /* To ensure responsiveness and block centering */
+    width: 100%;
+    max-width: 560px; /* Standard size or desired max width */
+    height: auto;
+    min-height: 300px; 
+    display: block;
+    margin: 0 auto;
+}
+.video-container figure {
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+/* ... (Existing .video-container and form styling remains the same for functionality) ... */
+
+/* FOOTER */
+footer {
+    background-color: #ff6699; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+/* MEDIA QUERY FOR RESPONSIVENESS (Structure adaptation) */
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 80;
+        gap: 5px;
+    }
+    nav a {
+        display: block;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+    <h1>SAY THE NAME! SEVENTEEN</h1>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#units">Units & Members</a></li>
+            <li><a href="#music">Discography</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section id="home" class="content-box">
+            <h2>Welcome, Carat!</h2>
+            <p>This is the official fan hub for <span class="carat-diamond">SEVENTEEN</span>. The 13 members, 3 units, and 1 team shine together!</p>
+        </section>
+        
+        <hr>
+
+        <section id="units" class="content-box">
+            <h2>The 13 Members and Sub-Units</h2>
+            <p>SEVENTEEN is composed of three sub-units: Hip-Hop, Vocal, and Performance.</p>
+            
+            <h3>Hip-Hop Team (Leaders: S.Coups)</h3>
+            <ul class="member-list">
+                <li>S.Coups (Leader of Hip-Hop Team and SEVENTEEN)</li>
+                <li>Wonwoo</li>
+                <li>Mingyu</li>
+                <li>Vernon</li>
+            </ul>
+
+            <h3>Vocal Team (Leaders: Woozi)</h3>
+            <ul class="member-list">
+                <li>Woozi (Leader of Vocal Team)</li>
+                <li>Jeonghan</li>
+                <li>Joshua</li>
+                <li>DK</li>
+                <li>Seungkwan</li>
+            </ul>
+
+            <h3>Performance Team (Leaders: Hoshi)</h3>
+            <ul class="member-list">
+                <li>Hoshi (Leader of Performance Team)</li>
+                <li>Jun</li>
+                <li>The8</li>
+                <li>Dino</li>
+            </ul>
+        </section>
+        <hr>
+
+        <section id="music" class="content-box">
+            <h2>Newest Comeback: "THUNDER"</h2>
+            
+            <video width="560" height="315" controls>
+                <source src="C:\Users\ASUS\Documents\DEGREE\SEM 3\WEB DESIGN\LAB 4\SEVENTEEN (세븐틴) 'THUNDER' Official MV.mp4" type="video/mp4">
+            </video>
+                <figure>
+                    <figcaption>Watch the official music video for "THUNDER."</figcaption>
+                </figure>
+        </section>
+        
+        <hr>
+        
+        <section id="carat-zone" class="content-box">
+            <h2>Join the Official Carat Membership</h2>
+            
+            <form id="contact-form" action="#" method="POST">
+                
+                <label for="name">Your Carat Name </label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label>Sub-Unit Preference :</label><br>
+                <div class="radio-group">
+                    <input type="radio" id="vocal" name="unit" value="vocal" required><label for="vocal">Vocal Team</label><br>
+                    <input type="radio" id="hiphop" name="unit" value="hiphop"><label for="hiphop">Hip-Hop Team</label><br>
+                    <input type="radio" id="performance" name="unit" value="performance"><label for="performance">Performance Team</label>
+                </div>
+                <br>
+                <label>Albums You Own :</label> <br>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="fml" name="album" value="FML"><label for="fml">FML</label><br>
+                    <input type="checkbox" id="love&letter" name="album" value="Love&Letter"><label for="love&letter">Love & Letter</label><br>
+                    <input type="checkbox" id="teenage" name="album" value="TeenAge"><label for="teenage">Teen, Age</label><br>
+                    <input type="checkbox" id="anode" name="album" value="AnOde"><label for="anode">An Ode</label><br>
+                    <input type="checkbox" id="facethesun" name="album" value="FaceTheSun"><label for="facethesun">Face the Sun</label><br>
+                    <input type="checkbox" id="gose" name="album" value="GoingSeventeen"><label for="gose">Going Seventeen</label><br>
+                    <input type="checkbox" id="attacca" name="album" value="Attacca"><label for="attacca">Attacca</label><br>
+                    <input type="checkbox" id="17righthere" name="album" value="17ISRIGHTHERE"><label for="17righthere">17 IS RIGHT HERE</label><br>
+                    <input type="checkbox" id="hb" name="album" value="HappyBurstday"><label for="hb">Happy Burstday</label><br>
+                </div>
+                <br>
+                <button type="submit" class="submit-button">Register as a Carat</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SEVENTEEN & Carat Official Fan Site. | Say The Name!</p>
+    </footer>
+
+</body>
+</html>
